@@ -1,4 +1,4 @@
-package com.suikajy.demo.lamda;
+package com.suikajy.demo.java8api.lamda;
 
 import java.util.Comparator;
 import java.util.List;

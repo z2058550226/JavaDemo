@@ -1,4 +1,4 @@
-package com.suikajy.demo.function;
+package com.suikajy.demo.java8api.function;
 
 import java.util.Objects;
 import java.util.function.Function;
