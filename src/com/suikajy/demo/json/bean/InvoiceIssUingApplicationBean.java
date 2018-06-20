@@ -1,4 +1,4 @@
-package com.suikajy.demo;
+package com.suikajy.demo.json.bean;
 
 
 import java.util.ArrayList;
