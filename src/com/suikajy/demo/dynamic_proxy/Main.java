@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         //下面模拟了一个基于Java动态代理实现的保护代理模式
+        //保护代理：控制代理模式中Subject的一些属性的修改访问
         PersonBeanImp person1 = new PersonBeanImp();
         person1.setGender("woman");
         person1.setName("suika");
