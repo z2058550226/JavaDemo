@@ -4,19 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Observable.create(new ObservableOnSubscribe<String>() {
-            @Override
-            public void subscribe(Emitter<String> emitter) {
-                emitter.onNext("aaa");
-                emitter.onComplete();
-            }
-        }).subscribe(new Consumer<String>() {
-            @Override
-            public void accept(String s) {
-                System.out.println(s);
-            }
-        });
-
+        Observable.create((ObservableOnSubscribe<String>) emitter -> {
+            emitter.onNext("aaa");
+            emitter.onComplete();
+        }).subscribe(System.out::println);
 
     }
 
@@ -61,9 +52,9 @@ public class Main {
         }
     }
 
-    private static abstract class ObservableOnSubscribe<T> {
+    interface ObservableOnSubscribe<T> {
 
-        public abstract void subscribe(Emitter<T> emitter);
+        void subscribe(Emitter<T> emitter);
     }
 
     interface Emitter<T> {
