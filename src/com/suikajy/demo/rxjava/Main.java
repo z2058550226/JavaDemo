@@ -24,7 +24,7 @@ public class Main {
         }
 
         public void subscribe(Observer<T> observer) {
-            mSubscriber.subscribe(new Emitter<T>() {
+            mSubscriber.subscribe(new Emitter<>() {
                 @Override
                 public void onNext(T t) {
                     observer.onNext(t);
@@ -38,7 +38,7 @@ public class Main {
         }
 
         public void subscribe(Consumer<T> consumer) {
-            mSubscriber.subscribe(new Emitter<T>() {
+            mSubscriber.subscribe(new Emitter<>() {
                 @Override
                 public void onNext(T t) {
                     consumer.accept(t);

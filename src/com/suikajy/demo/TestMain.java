@@ -1,11 +1,13 @@
 package com.suikajy.demo;
 
-import io.reactivex.*;
+import io.reactivex.Flowable;
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 import java.util.Map;
-import java.util.concurrent.Executor;
 
 public class TestMain {
 
