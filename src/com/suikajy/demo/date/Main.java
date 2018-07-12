@@ -16,6 +16,9 @@ public class Main {
         calendar.add(Calendar.MONTH, -1 );
 
         print(calendar);
+
+        calendar.set(Calendar.DAY_OF_MONTH,2);
+        print(calendar);
     }
 
     private static void print(Calendar calendar) {
