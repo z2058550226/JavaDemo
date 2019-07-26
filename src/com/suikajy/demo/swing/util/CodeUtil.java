@@ -54,7 +54,7 @@ public class CodeUtil {
 
         byte[] byteMi = null;
         if (null != decryptString) {
-            //byteMi = Base64.decode(decryptString);
+            //byteMi = Base64.encode(decryptString);
             try {
                 byteMi = Base64.decode(decryptString, Base64.NO_WRAP);
             } catch (Exception e) {
@@ -87,7 +87,7 @@ public class CodeUtil {
     }
 
     /***
-     * decode by base64
+     * encode by base64
      */
     public static String decodeBase64(String encodedString) throws Exception {
         return new String(Base64.decode(encodedString, Base64.DEFAULT));

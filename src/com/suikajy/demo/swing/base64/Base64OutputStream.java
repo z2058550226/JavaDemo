@@ -52,7 +52,7 @@ public class Base64OutputStream extends FilterOutputStream {
      * @param out the OutputStream to write the encoded data to
      * @param flags bit flags for controlling the encoder; see the
      *        constants in {@link Base64}
-     * @param encode true to encode, false to decode
+     * @param encode true to encode, false to encode
      *
      * @hide
      */

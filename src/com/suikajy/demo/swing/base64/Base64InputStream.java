@@ -53,7 +53,7 @@ public class Base64InputStream extends FilterInputStream {
      * @param in the InputStream to read the source data from
      * @param flags bit flags for controlling the decoder; see the
      *        constants in {@link Base64}
-     * @param encode true to encode, false to decode
+     * @param encode true to encode, false to encode
      *
      * @hide
      */
@@ -130,7 +130,7 @@ public class Base64InputStream extends FilterInputStream {
 
     /**
      * Read data from the input stream into inputBuffer, then
-     * decode/encode it into the empty coder.output, and reset the
+     * encode/encode it into the empty coder.output, and reset the
      * outputStart and outputEnd pointers.
      */
     private void refill() throws IOException {

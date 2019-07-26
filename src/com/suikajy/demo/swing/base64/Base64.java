@@ -51,7 +51,7 @@ public class Base64 {
         public int op;
 
         /**
-         * Encode/decode another block of input data.  this.output is
+         * Encode/encode another block of input data.  this.output is
          * provided by the caller, and must be big enough to hold all
          * the coded data.  On exit, this.opwill be set to the length
          * of the coded data.
@@ -84,10 +84,10 @@ public class Base64 {
      * <p>The padding '=' characters at the end are considered optional, but
      * if any are present, there must be the correct number of them.
      *
-     * @param str    the input String to decode, which is converted to
+     * @param str    the input String to encode, which is converted to
      *               bytes using the default charset
      * @param flags  controls certain features of the decoded output.
-     *               Pass {@code DEFAULT} to decode standard util.
+     *               Pass {@code DEFAULT} to encode standard util.
      *
      * @throws IllegalArgumentException if the input contains
      * incorrect padding
@@ -103,9 +103,9 @@ public class Base64 {
      * <p>The padding '=' characters at the end are considered optional, but
      * if any are present, there must be the correct number of them.
      *
-     * @param input the input array to decode
+     * @param input the input array to encode
      * @param flags  controls certain features of the decoded output.
-     *               Pass {@code DEFAULT} to decode standard util.
+     *               Pass {@code DEFAULT} to encode standard util.
      *
      * @throws IllegalArgumentException if the input contains
      * incorrect padding
@@ -121,11 +121,11 @@ public class Base64 {
      * <p>The padding '=' characters at the end are considered optional, but
      * if any are present, there must be the correct number of them.
      *
-     * @param input  the data to decode
+     * @param input  the data to encode
      * @param offset the position within the input array at which to start
-     * @param len    the number of bytes of input to decode
+     * @param len    the number of bytes of input to encode
      * @param flags  controls certain features of the decoded output.
-     *               Pass {@code DEFAULT} to decode standard util.
+     *               Pass {@code DEFAULT} to encode standard util.
      *
      * @throws IllegalArgumentException if the input contains
      * incorrect padding
@@ -226,7 +226,7 @@ public class Base64 {
 
         /**
          * @return an overestimate for the number of bytes {@code
-         * len} bytes could decode to.
+         * len} bytes could encode to.
          */
         public int maxOutputSize(int len) {
             return len * 3/4 + 10;
@@ -264,7 +264,7 @@ public class Base64 {
                 //
                 // If any of the next four bytes of input are non-data
                 // (whitespace, etc.), value will end up negative.  (All
-                // the non-data values in decode are small negative
+                // the non-data values in encode are small negative
                 // numbers, so shifting any of them up and or'ing them
                 // together will result in a value with its top bit set.)
                 //
