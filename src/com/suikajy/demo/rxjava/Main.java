@@ -8,7 +8,6 @@ public class Main {
             emitter.onNext("aaa");
             emitter.onComplete();
         }).subscribe(System.out::println);
-
     }
 
     static class Observable<T> {

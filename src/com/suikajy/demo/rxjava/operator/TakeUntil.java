@@ -1,4 +1,4 @@
-package com.suikajy.demo.rxjava;
+package com.suikajy.demo.rxjava.operator;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
