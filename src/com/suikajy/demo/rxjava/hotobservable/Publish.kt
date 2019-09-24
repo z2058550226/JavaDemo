@@ -1,4 +1,4 @@
-package com.suikajy.demo.rxjava.operator
+package com.suikajy.demo.rxjava.hotobservable
 
 import com.suikajy.demo.util.Sleeper
 import io.reactivex.Observable
