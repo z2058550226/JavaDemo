@@ -1,7 +1,7 @@
 package com.suikajy.demo.rxjava.hotobservable;
 
-import io.reactivex.Observable;
-import io.reactivex.disposables.Disposable;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.disposables.Disposable;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,7 +12,7 @@ import static com.suikajy.demo.util.Sleeper.sleep;
  * When the number of subscriber is equal to the parameter 'numberOfSubscribers' autoConnect() start to
  * connect() the publisher.
  * the numberOfSubscriber is 1 by default.
- *
+ * <p>
  * When the autoConnect() has no subscriber, it will continue emitting.
  */
 public class AutoConnect {

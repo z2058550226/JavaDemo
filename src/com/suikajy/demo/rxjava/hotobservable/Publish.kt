@@ -1,8 +1,8 @@
 package com.suikajy.demo.rxjava.hotobservable
 
 import com.suikajy.demo.util.Sleeper
-import io.reactivex.Observable
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
 fun main() {

@@ -1,12 +1,6 @@
-package com.suikajy.demo.rxjava.operator
+package com.suikajy.demo.rxjava.operator.logiccontrol
 
-import io.reactivex.Observable
-import io.reactivex.functions.Function
-import javax.xml.crypto.AlgorithmMethod
-import javax.xml.crypto.KeySelector
-import javax.xml.crypto.KeySelectorResult
-import javax.xml.crypto.XMLCryptoContext
-import javax.xml.crypto.dsig.keyinfo.KeyInfo
+import io.reactivex.rxjava3.core.Observable
 
 
 fun main() {
@@ -18,11 +12,7 @@ fun main() {
             ElementDC(1, "one"), ElementDC(3, "three"),
             ElementDC(4, "four"), ElementDC(2, "two"))
 
-    obCommon.distinct(object : Function<ElementCommon, Any> {
-        override fun apply(p0: ElementCommon): Any {
-            return p0.id
-        }
-    })
+    obCommon.distinct(ElementCommon::id)
             .subscribe { println(it) }
 
     obDC.distinctUntilChanged()

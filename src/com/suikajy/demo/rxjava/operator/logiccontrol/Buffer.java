@@ -1,9 +1,9 @@
-package com.suikajy.demo.rxjava.operator;
+package com.suikajy.demo.rxjava.operator.logiccontrol;
 
-import io.reactivex.Observable;
-import io.reactivex.ObservableSource;
-import io.reactivex.Observer;
-import io.reactivex.functions.Function;
+import com.suikajy.demo.rxjava.operator.TestObservable;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.ObservableSource;
+import io.reactivex.rxjava3.functions.Function;
 
 import java.util.concurrent.TimeUnit;
 
@@ -70,7 +70,7 @@ public class Buffer {
 
     private static void openAndClosingSelector() {
         TestObservable.intervalOb
-                .buffer(Observable.interval(2000,1500, TimeUnit.MILLISECONDS), new Function<Long, ObservableSource<? extends Long>>() {
+                .buffer(Observable.interval(2000, 1500, TimeUnit.MILLISECONDS), new Function<Long, ObservableSource<? extends Long>>() {
                     @Override
                     public ObservableSource<? extends Long> apply(Long times) throws Exception {
                         // This 'times' parameter is the times of openingSelector event was emitted

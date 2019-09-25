@@ -1,7 +1,7 @@
-package com.suikajy.demo.rxjava.operator;
+package com.suikajy.demo.rxjava.operator.timecontrol;
 
-import io.reactivex.Observable;
-import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.ObservableOnSubscribe;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
